@@ -1,7 +1,6 @@
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -18,8 +17,5 @@ class CardDeliveryTest {
         form.$("[data-test-id=agreement]").click();
         $$("button").find(exactText("Забронировать")).click();
         $("[data-test-id=notification]").waitUntil(visible, 15000);
-
     }
-
-
 }
